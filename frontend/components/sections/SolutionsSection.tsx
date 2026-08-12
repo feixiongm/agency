@@ -1,0 +1,5 @@
+import { CheckIcon } from "@heroicons/react/20/solid";
+import { solutions } from "@/data/site-content";
+import { SectionHeader } from "@/components/ui/SectionHeader";
+
+export function SolutionsSection() { return <section id="solutions" className="section-space"><div className="container-page grid gap-14 lg:grid-cols-[.8fr_1.2fr]"><SectionHeader eyebrow="Solutions" title="Start with the business problem" description="Good software is measured by what it improves. We focus on clear outcomes, sensible architecture, and a system your team can maintain."/><div className="grid gap-x-8 gap-y-9 sm:grid-cols-2">{solutions.map((solution) => <article key={solution.title} className="flex gap-4"><span className="mt-0.5 grid h-7 w-7 shrink-0 place-items-center rounded-full bg-brand-50 text-brand-600"><CheckIcon className="h-4 w-4"/></span><div><h3 className="font-semibold">{solution.title}</h3><p className="mt-2 text-sm leading-6 text-muted">{solution.description}</p></div></article>)}</div></div></section>; }

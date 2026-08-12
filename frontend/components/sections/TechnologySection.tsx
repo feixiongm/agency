@@ -1,0 +1,4 @@
+import { technologyGroups } from "@/data/site-content";
+import { SectionHeader } from "@/components/ui/SectionHeader";
+
+export function TechnologySection() { return <section id="technologies" className="section-space bg-ink text-white"><div className="container-page"><SectionHeader eyebrow="Technologies" title="A modern, dependable technology stack" description="Proven tools selected for maintainability, operational clarity, and room to grow."/><div className="mt-12 grid gap-4 md:grid-cols-2 lg:grid-cols-5">{technologyGroups.map((group) => <div key={group.category} className="rounded-2xl border border-white/10 bg-white/[.04] p-5"><p className="mb-4 text-sm font-semibold text-sky-300">{group.category}</p><div className="flex flex-wrap gap-2">{group.technologies.map((tech) => <span key={tech} className="rounded-lg border border-white/10 bg-white/[.06] px-3 py-2 text-sm text-slate-200">{tech}</span>)}</div></div>)}</div></div></section>; }

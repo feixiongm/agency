@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html { scroll-behavior: smooth; }
+body { color: #0b1739; background: #fff; }
+::selection { background: #d9ebff; color: #0b1739; }
+
+@layer components {
+  .container-page { @apply mx-auto w-full max-w-7xl px-5 sm:px-8 lg:px-10; }
+  .section-space { @apply py-20 sm:py-24 lg:py-28; }
+  .focus-ring { @apply focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-500 focus-visible:ring-offset-2; }
+}

@@ -1,0 +1,4 @@
+import { processSteps } from "@/data/site-content";
+import { SectionHeader } from "@/components/ui/SectionHeader";
+
+export function ProcessSection() { return <section className="section-space bg-slate-50"><div className="container-page"><SectionHeader eyebrow="How we work" title="A clear path from idea to delivery" align="center"/><div className="relative mt-14 grid gap-5 md:grid-cols-4"><div className="absolute left-[12%] right-[12%] top-7 hidden h-px bg-line md:block"/>{processSteps.map((step) => <article key={step.number} className="relative rounded-2xl border border-line bg-white p-6"><span className="relative grid h-14 w-14 place-items-center rounded-full border-4 border-white bg-brand-600 text-sm font-bold text-white shadow">{step.number}</span><h3 className="mt-5 text-xl font-semibold">{step.title}</h3><p className="mt-3 text-sm leading-6 text-muted">{step.description}</p></article>)}</div></div></section>; }
